@@ -59,18 +59,23 @@ public class DiceRolling {
 		// Output random number up to specified number of sides
 		System.out.println(die1);
 		System.out.println(die2);
+		
 		if (sidesCount == 6) {
-			if (sum == 2) {
-				System.out.println("Snake Eyes!");
-			} else if (sum == 7 || sum == 11) {
-				System.out.println("Rolled a " + sum + " - Craps!");
-			} else if (sum == 12) {
-				System.out.println("Boxcar!");
-			}
+			craps(sum);
 		}
 
 	}
 
+	public static void craps(int sum) {
+		if (sum == 2) {
+			System.out.println("Snake Eyes!");
+		} else if (sum == 7 || sum == 11) {
+			System.out.println("Rolled a " + sum + " - Craps!");
+		} else if (sum == 12) {
+			System.out.println("Boxcar!");
+		}
+	}
+	
 	public static int getValidInput() {
 		int userNumber = 0;
 		boolean valid = false;
